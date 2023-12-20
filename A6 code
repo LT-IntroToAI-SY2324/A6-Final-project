@@ -12,13 +12,13 @@ k = 3
 km = KMeans(n_clusters=k).fit(x_std)
 centroids = km.cluster_centers_
 labels = km.labels_
-plt.figure(figsize=(5,4))
+plt.figure(figsize=(10,8))
 for i in range(k):
     cluster = x_std[labels == i]
     plt.scatter(cluster[:,0], cluster[:,1])
 plt.scatter(centroids[:, 0], centroids[:, 1], marker='X', s=100,
             c='r', label='centroid')
 
-plt.xlabel('Square feet of house')
+plt.xlabel('Square feet of house (00)"')
 plt.ylabel('price of house')
 plt.show()
