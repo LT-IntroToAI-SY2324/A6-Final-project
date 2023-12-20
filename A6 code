@@ -4,7 +4,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 
 
-data = pd.read_csv("A6-Finalproject/housing_price_dataset.csv")
+data = pd.read_csv("housing_price_dataset.csv")
 data = data[["SquareFeet", "Price"]]
 
 x_std = StandardScaler().fit_transform(data)
